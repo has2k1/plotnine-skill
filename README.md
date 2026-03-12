@@ -7,7 +7,8 @@ An [AI Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) for ge
 ### Claude Code (Plugin)
 
 ```
-/plugins add https://github.com/has2k1/plotnine-skill
+/plugin marketplace add has2k1/plotnine-skill
+/plugin install plotnine@plotnine-skill
 ```
 
 ### Manual Installation

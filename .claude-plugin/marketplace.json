@@ -1,5 +1,5 @@
 {
-  "name": "plotnine-skill-marketplace",
+  "name": "plotnine-skill",
   "description": "Official marketplace for plotnine-skill - A Claude Code plugin for data visualization with plotnine",
   "owner": {
     "name": "Hassan Kibirige",
@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "plotnine-skill",
+      "name": "plotnine",
       "description": "Generate, refine and export data visualizations using plotnine.",
       "version": "0.1.0",
       "author": {
@@ -18,6 +18,9 @@
         "source": "github",
         "repo": "has2k1/plotnine-skill"
       },
+      "skills": [
+        "./skills/plotnine"
+      ],
       "tags": [
         "plotnine",
         "data-visualization",
