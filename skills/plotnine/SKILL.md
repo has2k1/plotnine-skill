@@ -78,6 +78,12 @@ Use: [references/saving-and-export.md](references/saving-and-export.md)
 Task: Combine multiple plots side-by-side or stacked
 Use: [references/composition.md](references/composition.md)
 
+Task: Plot geographic / map data
+Use: [references/maps.md](references/maps.md)
+
+Task: Specify literal aesthetic values (colors, linetypes, shapes, fonts)
+Use: [references/aesthetic-specification.md](references/aesthetic-specification.md)
+
 ## Plotnine Essentials
 
 ### Standard import
@@ -176,6 +182,8 @@ closest achievable result using only plotnine. Never fall back to matplotlib.
 - [references/coords-and-axes.md](references/coords-and-axes.md) — coord_cartesian, coord_flip, coord_fixed, coord_trans
 - [references/saving-and-export.md](references/saving-and-export.md) — ggplot.save(), formats, sizes, in-memory saving
 - [references/composition.md](references/composition.md) — Plot composition with |, /, +, &, *, plot_layout, plot_annotation
+- [references/maps.md](references/maps.md) — geom_map, GeoPandas, choropleths, coord_fixed, theme_void
+- [references/aesthetic-specification.md](references/aesthetic-specification.md) — Literal color/linetype/shape/size/text value formats
 
 ### External Resources
 
