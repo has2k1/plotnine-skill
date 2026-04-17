@@ -128,57 +128,6 @@ from plotnine.data import mpg
 )
 ```
 
-### Common geom one-liners
-
-Each pattern below is a complete layer addition. Combine with the `ggplot()` +
-`aes()` + `labs()` structure above.
-
-```python
-# Scatter
-geom_point()
-
-# Bar chart (counts)
-geom_bar()                              # x only, counts rows
-
-# Bar chart (pre-computed values)
-geom_col()                              # x and y required
-
-# Line chart
-geom_line()                             # sort data by x first
-
-# Histogram
-geom_histogram(binwidth=0.5)
-
-# Box plot
-geom_boxplot()                          # x (categorical) and y (continuous)
-```
-
-### Scatter with color mapping
-
-```python
-from plotnine import *
-from plotnine.data import diamonds
-
-(
-    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price", color="cut"))
-    + geom_point(alpha=0.5, size=1)
-    + labs(x="Carat", y="Price (USD)", title="Diamond Price by Carat and Cut", color="Cut Quality")
-)
-```
-
-### Bar chart of counts
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="class"))
-    + geom_bar()
-    + labs(x="Vehicle Class", y="Count", title="Number of Cars by Class")
-)
-```
-
 ### Saving a plot
 
 ```python

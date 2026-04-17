@@ -25,6 +25,31 @@ represents data using different shapes: points, lines, bars, etc.
 | `geom_smooth` | x, y, color | `smooth` | `method`, `se` |
 | `geom_text` | x, y, label, color, size | `identity` | `nudge_x`, `nudge_y` |
 
+## Quick one-liners
+
+Each geom below is a complete layer. Combine with the minimal
+`ggplot() + aes() + labs()` structure shown in SKILL.md Essentials.
+
+```python
+# Scatter
+geom_point()
+
+# Bar chart (counts)
+geom_bar()                              # x only, counts rows
+
+# Bar chart (pre-computed values)
+geom_col()                              # x and y required
+
+# Line chart
+geom_line()                             # sort data by x first
+
+# Histogram
+geom_histogram(binwidth=0.5)
+
+# Box plot
+geom_boxplot()                          # x (categorical) and y (continuous)
+```
+
 ## Point and Scatter Plots
 
 ### Basic scatter plot
@@ -37,6 +62,22 @@ from plotnine.data import mpg
     ggplot(mpg, aes(x="displ", y="hwy", color="factor(cyl)"))
     + geom_point()
     + labs(x="Engine Displacement (L)", y="Highway MPG", title="Fuel Efficiency by Engine Size", color="Cylinders")
+)
+```
+
+### Scatter with alpha for dense data
+
+Larger datasets benefit from `alpha` transparency and a smaller `size`
+to reduce overplotting.
+
+```python
+from plotnine import *
+from plotnine.data import diamonds
+
+(
+    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price", color="cut"))
+    + geom_point(alpha=0.5, size=1)
+    + labs(x="Carat", y="Price (USD)", title="Diamond Price by Carat and Cut", color="Cut Quality")
 )
 ```
 
