@@ -241,6 +241,24 @@ import numpy as np
   aggregation is only needed when the stat layer doesn't provide the right
   computation or you need the aggregated frame for other purposes.
 
+- **`ordered=True` on `pd.Categorical` doesn't set plot order**: plotnine
+  uses the `categories=` argument to determine x-axis / legend order,
+  regardless of whether the Categorical is marked `ordered=True`.
+  `ordered=True` affects pandas comparison operators (`<`, `>`), not
+  plot ordering. Set order via `pd.Categorical(col, categories=[...])`.
+
+- **`geom_line` crosses groups without `group=`**: If your x-axis has
+  repeat values across multiple series and no aesthetic distinguishes
+  them, `geom_line` draws a single zigzagging line through all points.
+  Set `aes(group="series_col")`, or map `color=` / `linetype=` to the
+  series column — those set `group` implicitly.
+
+- **Datetime columns need `datetime64`, not strings**: Plotting a
+  column of date strings treats them as discrete categories in
+  alphabetical order. Convert first with `pd.to_datetime(df["date"])`.
+  If you mix timezone-aware and naive datetimes in the same column,
+  normalize to one form before plotting.
+
 ## Resources
 
 - [plotnine data reference](https://plotnine.org/reference/#data)

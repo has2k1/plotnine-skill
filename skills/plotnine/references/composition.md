@@ -293,6 +293,25 @@ comp.save("composition.png", dpi=300)
   the composition `.save()` does not accept `width` or `height`. Set the
   figure size via `theme(figure_size=...)` applied with `&`.
 
+- **Scales don't share across composed plots**: Each plot has its own
+  axis range. To make two plots share a y-scale, apply
+  `scale_y_continuous(limits=(lo, hi))` (or `coord_cartesian(ylim=...)`)
+  to both. There is no auto-sync — a value that clips in one plot
+  won't propagate to its neighbour.
+
+- **Duplicate legends from same-variable mappings**: If two composed
+  plots both map the same variable to `color`, the composition
+  renders two identical legends side by side; plotnine does not
+  auto-merge them (see Limitations). Workaround: suppress the
+  duplicate with `theme(legend_position="none")` on one plot, or
+  restructure as a single faceted plot.
+
+- **Stacked plots don't auto-align panels**: `p1 / p2` stacks panels
+  but doesn't constrain panel widths to match. If `p1` has wider
+  y-tick labels than `p2`, the plotting areas offset horizontally.
+  Normalize tick label widths (pad with leading spaces, or fix
+  `limits` so both plots render the same tick format) to align.
+
 ## Resources
 
 - [plotnine composition guide](https://plotnine.org/reference/#composition)

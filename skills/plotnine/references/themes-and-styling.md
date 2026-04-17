@@ -255,6 +255,28 @@ from plotnine.data import mpg
 - **`ha` for horizontal alignment**: When rotating x-axis labels, set
   `ha="right"` in `element_text()` to anchor rotated text correctly.
 
+- **`element_blank()` wipes the whole element**:
+  `theme(axis_title=element_blank())` removes *both* x and y axis
+  titles, not just one. To blank a single axis, target
+  `axis_title_x` or `axis_title_y` directly.
+
+- **Theme element inheritance**: Top-level elements propagate to
+  children. `theme(text=element_text(size=12))` sets the font size
+  for all text (axis text, axis titles, legend text, strip text,
+  etc.) unless a child element overrides it. Child overrides always
+  win — order in the `+` chain does not change that.
+
+- **`figure_size` vs `save(width, height)`**: `theme(figure_size=(W, H))`
+  is the default plot dimension (in inches). Passing `width=` /
+  `height=` to `ggplot.save()` overrides that default for the saved
+  output. The theme value applies to in-notebook display; the save
+  argument wins at export time.
+
+- **Panel vs plot background**: `panel_background` fills the plotting
+  area inside the axes. `plot_background` fills the whole figure
+  (around the title, axis labels, and legend). To fully recolor the
+  plot, set both.
+
 ## Resources
 
 - [plotnine themes reference](https://plotnine.org/reference/#themes)
