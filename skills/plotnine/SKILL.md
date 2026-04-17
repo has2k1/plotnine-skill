@@ -84,6 +84,73 @@ Use: [references/maps.md](references/maps.md)
 Task: Specify literal aesthetic values (colors, linetypes, shapes, fonts)
 Use: [references/aesthetic-specification.md](references/aesthetic-specification.md)
 
+## Decision Trees
+
+Natural-language routing for when a user's question doesn't map cleanly
+onto the task table above. Every leaf points to a reference file.
+
+### I need to show …
+
+```
+Show what?
+├─ one variable's distribution         → references/geoms.md (histogram, density, boxplot)
+├─ relationship between two variables  → references/geoms.md (point, smooth)
+│                                        + references/statistical-layers.md for trend lines
+├─ a categorical breakdown             → references/geoms.md (bar, col)
+├─ change over time                    → references/geoms.md (line, area)
+├─ geographic / spatial data           → references/maps.md
+├─ group comparison                    → references/geoms.md (violin, boxplot)
+│                                        + references/facets.md for small multiples
+└─ counts / proportions / heatmap      → references/geoms.md (bar, tile)
+```
+
+### I need to customize …
+
+```
+Customize what?
+├─ colors / palettes                   → references/color-and-accessibility.md
+├─ fonts / backgrounds / gridlines     → references/themes-and-styling.md
+├─ legends and guides                  → references/aesthetics-and-scales.md §Legends and Guides
+├─ scales (breaks, labels, limits)     → references/aesthetics-and-scales.md
+├─ axes / coordinates / transforms     → references/coords-and-axes.md
+├─ titles / subtitles / annotations    → references/labels-and-annotations.md
+└─ literal aesthetic values            → references/aesthetic-specification.md
+   (e.g. a specific hex, dash pattern, font weight)
+```
+
+### I need to lay out multiple plots or panels …
+
+```
+Layout how?
+├─ one plot split by a variable                    → references/facets.md
+│  (facet_wrap / facet_grid)
+└─ several independent plots side-by-side or stacked → references/composition.md
+   (| and / operators)
+```
+
+### I need to prepare my data …
+
+```
+Data shape problem?
+├─ reshape wide → long (or vice versa)  → references/data-preparation.md
+├─ order categorical axes               → references/data-preparation.md
+├─ aggregate before plotting            → references/data-preparation.md
+│                                         or references/statistical-layers.md (stat_summary)
+└─ drop / handle NAs                    → references/data-preparation.md
+```
+
+### I'm revising an existing plot
+
+```
+→ references/iterative-refinement.md
+```
+
+### I need to save / export
+
+```
+→ references/saving-and-export.md
+```
+
 ## Plotnine Essentials
 
 ### Standard import
