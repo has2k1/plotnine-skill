@@ -3,6 +3,15 @@
 Geometric objects (geoms) are the visual marks placed on a plot. Each geom
 represents data using different shapes: points, lines, bars, etc.
 
+## Reading Order
+
+| Task                                        | Read in order                                                    |
+|---------------------------------------------|------------------------------------------------------------------|
+| Pick a geom for a one-variable distribution | Geom Quick-Reference → Distributions                             |
+| Pick a geom for a two-variable relationship | Geom Quick-Reference → Point and Scatter Plots → Lines and Paths |
+| Show counts or aggregates by category       | Geom Quick-Reference → Bars and Columns                          |
+| Compose a geom with a stat layer            | Geom Quick-Reference → See Also → `statistical-layers.md`        |
+
 ## Geom Quick-Reference
 
 | Geom | Typical aes | Default stat | Common params |

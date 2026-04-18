@@ -4,6 +4,15 @@ Themes control the non-data appearance of a plot: backgrounds, gridlines, fonts,
 and legend placement. plotnine provides built-in themes and a flexible `theme()`
 system for customization.
 
+## Reading Order
+
+| Task                             | Read in order                                                      |
+|----------------------------------|--------------------------------------------------------------------|
+| Pick a built-in theme            | Built-In Themes                                                    |
+| Customize specific elements      | Built-In Themes → theme() Element System → Common Customizations   |
+| Build a reusable theme           | theme() Element System → Reusable Custom Theme                     |
+| Layer multiple tweaks additively | theme() Element System → Cumulative Theme Additions                |
+
 ## Built-In Themes
 
 plotnine includes 14 built-in themes. By default, plotnine uses `theme_gray`.

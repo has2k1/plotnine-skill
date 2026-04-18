@@ -3,6 +3,16 @@
 Aesthetics map data variables to visual properties. Scales control how those
 mappings translate to visual output — colors, sizes, axis positions, etc.
 
+## Reading Order
+
+| Task                                | Read in order                                                    |
+|-------------------------------------|------------------------------------------------------------------|
+| Map a variable to a visual property | Mapping vs Setting → Aesthetic Channels                          |
+| Pick a color scale                  | Scale Families → Discrete Color Scales / Continuous Color Scales |
+| Customize a scale (breaks, labels)  | Scale Families → Position Scales                                 |
+| Customize a legend or guide         | Legends and Guides                                               |
+| Use a stat-computed variable        | Computed Aesthetics                                              |
+
 ## Mapping vs Setting
 
 ### Mapping a variable (inside `aes()`)
