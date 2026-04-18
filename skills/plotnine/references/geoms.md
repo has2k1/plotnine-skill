@@ -377,6 +377,16 @@ The `sides` parameter controls which axes get rugs: `"b"` (bottom), `"l"`
 - **Overplotting**: With many data points, use `alpha` transparency,
   `geom_jitter`, `geom_bin2d`, or `geom_density_2d` instead of `geom_point`.
 
+## See Also
+
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — mapping
+  variables to geom aesthetics
+- [statistical-layers.md](statistical-layers.md) — smoothers,
+  stat summaries, and position adjustments
+- [facets.md](facets.md) — splitting a geom across small multiples
+- [labels-and-annotations.md](labels-and-annotations.md) — adding
+  text labels to geoms
+
 ## Resources
 
 - [plotnine geom reference](https://plotnine.org/reference/#geoms)

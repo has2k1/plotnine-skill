@@ -340,3 +340,13 @@ See [themes-and-styling.md](themes-and-styling.md) for the full
 - **Invalid `after_stat` variable**: The available computed variables depend on
   the stat. For `geom_histogram` (uses `stat_bin`): `count`, `density`,
   `ncount`, `ndensity`. Check the stat documentation for available variables.
+
+## See Also
+
+- [aesthetic-specification.md](aesthetic-specification.md) — literal
+  value formats for colors, linetypes, shapes, fonts
+- [color-and-accessibility.md](color-and-accessibility.md) —
+  palette choice and colorblind-safe scales
+- [themes-and-styling.md](themes-and-styling.md) — styling legend
+  and guide elements
+- [geoms.md](geoms.md) — which aesthetics each geom accepts

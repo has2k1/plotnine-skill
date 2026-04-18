@@ -183,6 +183,14 @@ function. For pie charts or radar charts, consider alternative representations:
   and y from 0-10, `coord_fixed(ratio=1)` creates an extremely wide plot. Use
   a different ratio or let plotnine choose automatically.
 
+## See Also
+
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — position
+  scales (`scale_x_continuous`, `scale_y_log10`, etc.)
+- [facets.md](facets.md) — `scales="free"` to let each panel pick
+  its own coordinate range
+- [maps.md](maps.md) — `coord_fixed()` is essential for geographic plots
+
 ## Resources
 
 - [plotnine coord_cartesian reference](https://plotnine.org/reference/coord_cartesian)

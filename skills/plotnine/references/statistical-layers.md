@@ -262,6 +262,14 @@ from plotnine.data import mpg
   elements may not align properly with bar widths. Match `position_dodge(width=)`
   to `geom_bar(width=)`.
 
+## See Also
+
+- [geoms.md](geoms.md) — the geoms these stats produce
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — `after_stat()`
+  mappings for stat-computed variables
+- [data-preparation.md](data-preparation.md) — when to precompute vs
+  use a stat layer
+
 ## Resources
 
 - [plotnine geom_smooth reference](https://plotnine.org/reference/geom_smooth)

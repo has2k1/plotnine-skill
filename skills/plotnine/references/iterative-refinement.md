@@ -134,7 +134,7 @@ from plotnine.data import mpg
   summary. The user should understand the revision without diffing the code
   themselves.
 
-## Resources
+## See Also
 
 - [geoms.md](geoms.md) — available layers to add
 - [aesthetics-and-scales.md](aesthetics-and-scales.md) — scale adjustments

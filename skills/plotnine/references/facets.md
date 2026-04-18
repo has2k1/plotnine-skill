@@ -228,6 +228,14 @@ from plotnine.data import penguins
 - **Too many panels**: Faceting by a high-cardinality variable produces too many
   small panels. Filter or bin the variable before faceting.
 
+## See Also
+
+- [geoms.md](geoms.md) — the geoms being faceted
+- [coords-and-axes.md](coords-and-axes.md) — `scales="free"` interaction
+  with coordinate systems
+- [themes-and-styling.md](themes-and-styling.md) — styling strip labels
+  (`strip_text`, `strip_background`)
+
 ## Resources
 
 - [plotnine facet_wrap reference](https://plotnine.org/reference/facet_wrap)

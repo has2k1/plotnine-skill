@@ -312,6 +312,13 @@ comp.save("composition.png", dpi=300)
   Normalize tick label widths (pad with leading spaces, or fix
   `limits` so both plots render the same tick format) to align.
 
+## See Also
+
+- [themes-and-styling.md](themes-and-styling.md) — `figure_size`
+  applied with `&` sets composition dimensions
+- [saving-and-export.md](saving-and-export.md) — composition `.save()`
+  differs from `ggplot.save()` (no `width`/`height`)
+
 ## Resources
 
 - [plotnine composition guide](https://plotnine.org/reference/#composition)

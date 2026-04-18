@@ -248,6 +248,14 @@ from plotnine.data import penguins
   but the visual size may differ because `annotate()` does not inherit the
   default theme text size. Set `size` explicitly for consistency.
 
+## See Also
+
+- [geoms.md](geoms.md) — the geoms carrying these annotations
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — setting
+  `name=` on a scale (alternative to `labs(aes=...)`)
+- [themes-and-styling.md](themes-and-styling.md) — styling title,
+  subtitle, caption, and annotation text
+
 ## Resources
 
 - [plotnine labs reference](https://plotnine.org/reference/labs)

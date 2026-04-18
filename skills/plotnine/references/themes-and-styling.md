@@ -277,6 +277,15 @@ from plotnine.data import mpg
   (around the title, axis labels, and legend). To fully recolor the
   plot, set both.
 
+## See Also
+
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — legends,
+  guides, and scale customization (theme controls their appearance)
+- [color-and-accessibility.md](color-and-accessibility.md) —
+  palettes that pair with theme choices
+- [aesthetic-specification.md](aesthetic-specification.md) — literal
+  values for theme element properties (colors, fonts, sizes)
+
 ## Resources
 
 - [plotnine themes reference](https://plotnine.org/reference/#themes)

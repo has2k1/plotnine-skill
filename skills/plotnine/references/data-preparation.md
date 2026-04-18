@@ -259,6 +259,12 @@ import numpy as np
   If you mix timezone-aware and naive datetimes in the same column,
   normalize to one form before plotting.
 
+## See Also
+
+- [geoms.md](geoms.md) — which geoms expect long vs wide input
+- [statistical-layers.md](statistical-layers.md) — prefer `stat_summary`
+  to manual pandas aggregation when possible
+
 ## Resources
 
 - [plotnine data reference](https://plotnine.org/reference/#data)

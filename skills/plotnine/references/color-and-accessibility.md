@@ -211,6 +211,13 @@ from plotnine.data import faithfuld
   is required. Pass a list of hex strings or named colors matching the number
   of levels.
 
+## See Also
+
+- [aesthetics-and-scales.md](aesthetics-and-scales.md) — applying
+  palettes through `scale_color_*` / `scale_fill_*`
+- [themes-and-styling.md](themes-and-styling.md) — picking background
+  colors that work with foreground palettes
+
 ## Resources
 
 - [plotnine scales reference](https://plotnine.org/reference/#scales)
