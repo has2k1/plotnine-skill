@@ -34,6 +34,28 @@ represents data using different shapes: points, lines, bars, etc.
 | `geom_smooth` | x, y, color | `smooth` | `method`, `se` |
 | `geom_text` | x, y, label, color, size | `identity` | `nudge_x`, `nudge_y` |
 
+### How geoms and stats share parameters
+
+The "Common params" column above lists parameters that belong to the
+geom's **default stat**, not the geom itself. Every geom forwards its
+`**kwargs` to its paired stat, so `geom_histogram(binwidth=0.5)` is
+passing `binwidth` through to `stat_bin`, and
+`geom_smooth(method="lm", se=False)` is passing both kwargs through
+to `stat_smooth`.
+
+Consequences:
+
+- A geom's own parameters are `mapping`, `data`, `stat`, `position`,
+  `na_rm`, plus a small number of geom-specific options.
+- Parameters like `binwidth`, `bins`, `method`, `span`, `width`,
+  `scale`, `direction` live on the stat.
+- Pairing a geom with a non-default stat
+  (e.g. `geom_bar(stat="identity")`) changes which kwargs are
+  accepted — the stat's, not the geom's.
+
+See [statistical-layers.md](statistical-layers.md) for stat-specific
+details.
+
 ## Quick one-liners
 
 Each geom below is a complete layer. Combine with the minimal
