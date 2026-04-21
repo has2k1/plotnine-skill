@@ -16,6 +16,28 @@ Transformed cartesian coordinate system
 | `ylim` | tuple[float, float] | `None` | Limits for y axis. If None, then they are automatically computed. |
 | `expand` | bool | `True` | If True, expand the coordinate axes by some factor. If False, use the limits from the data. |
 
+## Examples
+
+Applies a coordinate-space transformation without changing the
+underlying scale. The data stays on the original scale (so axis
+ticks reflect original units); only the visual spacing is
+transformed. Contrast with `scale_*_log10`, which transforms the
+scale itself.
+
+### Log-transformed coordinates
+
+```python
+from plotnine import *
+from plotnine.data import diamonds
+
+(
+    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price"))
+    + geom_point(alpha=0.3, size=0.5)
+    + coord_trans(x="log10", y="log10")
+    + labs(x="Carat", y="Price (USD)", title="Log-Log Coordinate Transform")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*
