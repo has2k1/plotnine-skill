@@ -24,6 +24,24 @@ Sequential, diverging and qualitative discrete color scales
 | `drop` | bool | `True` | Whether to drop unused categories from the scale |
 | `na_translate` | bool | `True` | If True translate missing values and show them. If False remove missing values. |
 
+## Examples
+
+### Qualitative palette
+
+ColorBrewer provides palettes designed for cartography and data visualization.
+
+```python
+from plotnine import *
+from plotnine.data import penguins
+
+(
+    ggplot(penguins.dropna(), aes(x="bill_length_mm", y="bill_depth_mm", color="species"))
+    + geom_point()
+    + scale_color_brewer(type="qual", palette="Set2")
+    + labs(x="Bill Length (mm)", y="Bill Depth (mm)", title="Penguins (Brewer Set2)", color="Species")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

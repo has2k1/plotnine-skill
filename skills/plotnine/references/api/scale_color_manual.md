@@ -22,6 +22,22 @@ Custom discrete color scale
 | `drop` | bool | `True` | Whether to drop unused categories from the scale |
 | `na_translate` | bool | `True` | If True translate missing values and show them. If False remove missing values. |
 
+## Examples
+
+### Assign specific colors per level
+
+```python
+from plotnine import *
+from plotnine.data import penguins
+
+(
+    ggplot(penguins.dropna(), aes(x="bill_length_mm", y="bill_depth_mm", color="species"))
+    + geom_point()
+    + scale_color_manual(values=["#E69F00", "#56B4E9", "#009E73"])
+    + labs(x="Bill Length (mm)", y="Bill Depth (mm)", title="Penguins (Manual Colors)", color="Species")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

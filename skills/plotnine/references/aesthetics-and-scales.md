@@ -5,13 +5,16 @@ mappings translate to visual output — colors, sizes, axis positions, etc.
 
 ## Reading Order
 
-| Task                                | Read in order                                                    |
-|-------------------------------------|------------------------------------------------------------------|
-| Map a variable to a visual property | Mapping vs Setting → Aesthetic Channels                          |
-| Pick a color scale                  | Scale Families → Discrete Color Scales / Continuous Color Scales |
-| Customize a scale (breaks, labels)  | Scale Families → Position Scales                                 |
-| Customize a legend or guide         | Legends and Guides                                               |
-| Use a stat-computed variable        | Computed Aesthetics                                              |
+| Task                                | Read in order                                      |
+|-------------------------------------|----------------------------------------------------|
+| Map a variable to a visual property | Mapping vs Setting → Aesthetic Channels            |
+| Pick a scale                        | Scale Families → `api/scale_<...>.md`              |
+| Customize a scale (breaks, labels)  | Scale Families → `api/scale_<axis>_<type>.md`      |
+| Customize a legend or guide         | Legends and Guides                                 |
+| Use a stat-computed variable        | Computed Aesthetics                                |
+
+Per-scale parameter reference and single-scale examples live at
+`api/scale_<name>.md`. This file covers the cross-cutting concepts.
 
 ## Mapping vs Setting
 
@@ -72,136 +75,8 @@ Every aesthetic has a corresponding `scale_*` function family:
 | `shape`   | `scale_shape_discrete`, `scale_shape_manual`                  | —                                                                    |
 | `alpha`   | `scale_alpha_discrete`                                        | `scale_alpha_continuous`                                             |
 
-## Discrete Color Scales
-
-### Brewer palettes
-
-ColorBrewer provides palettes designed for cartography and data visualization.
-
-```python
-from plotnine import *
-from plotnine.data import penguins
-
-(
-    ggplot(penguins.dropna(), aes(x="bill_length_mm", y="bill_depth_mm", color="species"))
-    + geom_point()
-    + scale_color_brewer(type="qual", palette="Set2")
-    + labs(x="Bill Length (mm)", y="Bill Depth (mm)", title="Penguins (Brewer Set2)", color="Species")
-)
-```
-
-### Manual color scale
-
-Assign specific colors to each level.
-
-```python
-from plotnine import *
-from plotnine.data import penguins
-
-(
-    ggplot(penguins.dropna(), aes(x="bill_length_mm", y="bill_depth_mm", color="species"))
-    + geom_point()
-    + scale_color_manual(values=["#E69F00", "#56B4E9", "#009E73"])
-    + labs(x="Bill Length (mm)", y="Bill Depth (mm)", title="Penguins (Manual Colors)", color="Species")
-)
-```
-
-## Continuous Color Scales
-
-### Colormap-based scale
-
-`scale_color_cmap` uses any matplotlib colormap by name.
-
-```python
-from plotnine import *
-from plotnine.data import diamonds
-
-(
-    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price", color="depth"))
-    + geom_point(alpha=0.5, size=1)
-    + scale_color_cmap(cmap_name="viridis")
-    + labs(x="Carat", y="Price (USD)", title="Diamond Price vs Carat", color="Depth %")
-)
-```
-
-### Two-point gradient
-
-```python
-from plotnine import *
-from plotnine.data import economics
-
-(
-    ggplot(economics, aes(x="date", y="unemploy", color="uempmed"))
-    + geom_point(size=0.5)
-    + scale_color_gradient(low="blue", high="red")
-    + labs(x="Date", y="Unemployed (thousands)", title="Unemployment Colored by Duration", color="Median\nDuration (wk)")
-)
-```
-
-## Position Scales
-
-### Continuous axis with custom breaks and labels
-
-```python
-from plotnine import *
-from plotnine.data import diamonds
-
-(
-    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price"))
-    + geom_point(alpha=0.3, size=1)
-    + scale_x_continuous(breaks=[0.5, 1, 1.5, 2, 3, 4])
-    + scale_y_continuous(labels=lambda x: [f"${v:,.0f}" for v in x])
-    + labs(x="Carat", y="Price", title="Diamond Prices with Custom Scales")
-)
-```
-
-### Log scale
-
-```python
-from plotnine import *
-from plotnine.data import diamonds
-
-(
-    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price"))
-    + geom_point(alpha=0.3, size=1)
-    + scale_y_log10()
-    + labs(x="Carat", y="Price (USD, log scale)", title="Diamond Prices (Log Scale)")
-)
-```
-
-### Discrete axis with reordered levels
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="class"))
-    + geom_bar()
-    + scale_x_discrete(limits=["2seater", "subcompact", "compact", "midsize", "minivan", "suv", "pickup"])
-    + labs(x="Vehicle Class", y="Count", title="Cars by Class (Custom Order)")
-)
-```
-
-## Date and Time Axes
-
-Use `scale_x_datetime` with `date_breaks` and `date_labels` to control
-tick spacing and formatting on date axes.
-
-```python
-from plotnine import *
-from plotnine.data import economics
-
-(
-    ggplot(economics, aes(x="date", y="unemploy"))
-    + geom_line()
-    + scale_x_datetime(date_breaks="10 years", date_labels="%Y")
-    + labs(x="Year", y="Unemployed (thousands)", title="US Unemployment with Date Scale")
-)
-```
-
-Common date format codes: `%Y` (4-digit year), `%y` (2-digit year), `%m`
-(month number), `%b` (abbreviated month), `%d` (day).
+Per-scale parameter surface, defaults, and single-scale examples live
+at `api/<scale-name>.md` (e.g. `api/scale_color_brewer.md`).
 
 ## Computed Aesthetics
 
@@ -353,6 +228,8 @@ See [themes-and-styling.md](themes-and-styling.md) for the full
 
 ## See Also
 
+- `api/scale_<name>.md` — parameter reference and single-scale examples
+  for each scale function
 - [aesthetic-specification.md](aesthetic-specification.md) — literal
   value formats for colors, linetypes, shapes, fonts
 - [color-and-accessibility.md](color-and-accessibility.md) —

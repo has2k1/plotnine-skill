@@ -23,6 +23,22 @@ Continuous y position log10 transformed scale
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `"log10"` |  |
 
+## Examples
+
+### Log-transformed y-axis
+
+```python
+from plotnine import *
+from plotnine.data import diamonds
+
+(
+    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price"))
+    + geom_point(alpha=0.3, size=1)
+    + scale_y_log10()
+    + labs(x="Carat", y="Price (USD, log scale)", title="Diamond Prices (Log Scale)")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

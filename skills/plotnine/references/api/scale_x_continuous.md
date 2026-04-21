@@ -23,6 +23,27 @@ Continuous x position
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `None` | The transformation of the scale. Either name of a trans function or a trans function. See mizani.transforms for possible options. |
 
+## Examples
+
+### Custom breaks and labels
+
+Set tick positions explicitly with `breaks=` and format tick text
+via a callable `labels=` function. The same parameters apply to
+`scale_y_continuous` (see also that symbol).
+
+```python
+from plotnine import *
+from plotnine.data import diamonds
+
+(
+    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price"))
+    + geom_point(alpha=0.3, size=1)
+    + scale_x_continuous(breaks=[0.5, 1, 1.5, 2, 3, 4])
+    + scale_y_continuous(labels=lambda x: [f"${v:,.0f}" for v in x])
+    + labs(x="Carat", y="Price", title="Diamond Prices with Custom Scales")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

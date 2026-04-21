@@ -21,6 +21,25 @@ Discrete x position
 | `drop` | bool | `True` | Whether to drop unused categories from the scale |
 | `na_translate` | bool | `True` | If True translate missing values and show them. If False remove missing values. |
 
+## Examples
+
+### Reorder categorical x-axis
+
+Pass a list to `limits=` to control the order of categories on the
+axis (and which categories are included at all).
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="class"))
+    + geom_bar()
+    + scale_x_discrete(limits=["2seater", "subcompact", "compact", "midsize", "minivan", "suv", "pickup"])
+    + labs(x="Vehicle Class", y="Count", title="Cars by Class (Custom Order)")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

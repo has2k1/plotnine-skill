@@ -26,6 +26,28 @@ Continuous x position for datetime data points
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `"datetime"` |  |
 
+## Examples
+
+### Formatted date ticks
+
+Use `date_breaks` for tick spacing and `date_labels` for the tick
+format string.
+
+```python
+from plotnine import *
+from plotnine.data import economics
+
+(
+    ggplot(economics, aes(x="date", y="unemploy"))
+    + geom_line()
+    + scale_x_datetime(date_breaks="10 years", date_labels="%Y")
+    + labs(x="Year", y="Unemployed (thousands)", title="US Unemployment with Date Scale")
+)
+```
+
+Common date format codes: `%Y` (4-digit year), `%y` (2-digit year),
+`%m` (month number), `%b` (abbreviated month), `%d` (day).
+
 ## See Also
 
 *(List related symbols here.)*

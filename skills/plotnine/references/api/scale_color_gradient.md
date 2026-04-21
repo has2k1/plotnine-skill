@@ -25,6 +25,22 @@ Create a 2 point color gradient
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `None` | The transformation of the scale. Either name of a trans function or a trans function. See mizani.transforms for possible options. |
 
+## Examples
+
+### Two-point gradient
+
+```python
+from plotnine import *
+from plotnine.data import economics
+
+(
+    ggplot(economics, aes(x="date", y="unemploy", color="uempmed"))
+    + geom_point(size=0.5)
+    + scale_color_gradient(low="blue", high="red")
+    + labs(x="Date", y="Unemployed (thousands)", title="Unemployment Colored by Duration", color="Median\nDuration (wk)")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

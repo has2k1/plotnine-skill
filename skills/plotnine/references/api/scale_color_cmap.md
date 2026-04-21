@@ -24,6 +24,24 @@ Create color scales using Matplotlib colormaps
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `None` | The transformation of the scale. Either name of a trans function or a trans function. See mizani.transforms for possible options. |
 
+## Examples
+
+### Matplotlib colormap by name
+
+`scale_color_cmap` uses any matplotlib colormap by name.
+
+```python
+from plotnine import *
+from plotnine.data import diamonds
+
+(
+    ggplot(diamonds.sample(2000, random_state=42), aes(x="carat", y="price", color="depth"))
+    + geom_point(alpha=0.5, size=1)
+    + scale_color_cmap(cmap_name="viridis")
+    + labs(x="Carat", y="Price (USD)", title="Diamond Price vs Carat", color="Depth %")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*
