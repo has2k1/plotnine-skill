@@ -1,0 +1,9 @@
+# Local HTML cache for the tier-4 regeneration script. Regenerated on
+# demand from plotnine.org; reproducible from the pin in
+# scripts/plotnine-version.txt, so no need to track.
+scripts/cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
