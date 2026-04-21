@@ -26,6 +26,34 @@ Empirical Cumulative Density Function
 | x |  |
 | y | after_stat('ecdf') |
 
+## Examples
+
+### Basic ECDF
+
+```python
+from plotnine import *
+from plotnine.data import faithful
+
+(
+    ggplot(faithful, aes(x="eruptions"))
+    + stat_ecdf()
+    + labs(x="Eruption Duration (min)", y="Cumulative Proportion", title="ECDF of Old Faithful Eruptions")
+)
+```
+
+### Grouped ECDF
+
+```python
+from plotnine import *
+from plotnine.data import penguins
+
+(
+    ggplot(penguins.dropna(), aes(x="body_mass_g", color="species"))
+    + stat_ecdf()
+    + labs(x="Body Mass (g)", y="Cumulative Proportion", color="Species", title="Body Mass ECDF by Species")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

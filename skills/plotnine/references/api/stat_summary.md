@@ -30,6 +30,58 @@ Calculate summary statistics depending on x
 | x |  |
 | y |  |
 
+## Examples
+
+Built-in `fun_data` options: `"mean_cl_boot"` (bootstrap CI),
+`"mean_se"` (mean +/- SE), `"median_hilow"` (median with quantile
+range).
+
+### Mean with standard error
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="class", y="hwy"))
+    + stat_summary(fun_data="mean_se")
+    + labs(x="Vehicle Class", y="Highway MPG", title="Mean +/- SE by Vehicle Class")
+)
+```
+
+### Custom summary functions
+
+Use `fun_y`, `fun_ymin`, and `fun_ymax` for custom aggregation.
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+import numpy as np
+
+(
+    ggplot(mpg, aes(x="class", y="hwy"))
+    + stat_summary(fun_y=np.median, fun_ymin=np.min, fun_ymax=np.max, color="red")
+    + labs(x="Vehicle Class", y="Highway MPG", title="Median with Min/Max Range")
+)
+```
+
+### Bar + error bar via `geom=`
+
+Swap the default pointrange for a bar and layer an errorbar on top.
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+import numpy as np
+
+(
+    ggplot(mpg, aes(x="class", y="hwy"))
+    + stat_summary(fun_y=np.mean, geom="bar", fill="steelblue", alpha=0.7)
+    + stat_summary(fun_data="mean_se", geom="errorbar", width=0.2)
+    + labs(x="Vehicle Class", y="Mean Highway MPG", title="Bar Chart with Error Bars")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*

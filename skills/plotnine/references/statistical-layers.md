@@ -1,191 +1,35 @@
 # Statistical Layers
 
-Statistical layers compute and display summaries, models, and transformations
-of the data. They combine a `stat_*` computation with a default geom.
+Statistical layers (`stat_*`) compute summaries, models, and
+transformations of the data, paired with a default geom. Per-stat
+parameter surface and single-stat examples live at
+`api/stat_<name>.md`.
 
-## geom_smooth / stat_smooth
+This file covers **position adjustments**, which control how
+overlapping geoms align — a topic that cuts across stats and geoms
+and doesn't map to a single symbol.
 
-Adds a smoothed conditional mean with an optional confidence interval.
+## Reading Order
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `method` | `"auto"` | Smoothing method: `"auto"`, `"lm"`, `"loess"`, `"lowess"`, `"glm"`, `"gls"`, `"rlm"` |
-| `formula` | `None` | Model formula (e.g., `"y ~ x + I(x**2)"`) |
-| `se` | `True` | Show confidence interval |
-| `level` | `0.95` | Confidence level |
-| `fullrange` | `False` | Extend fit to full range of x |
-| `span` | `0.75` | Span for loess/lowess (controls smoothness) |
-| `n` | `80` | Number of evaluation points |
-
-When `method="auto"`, plotnine uses loess for <1000 observations and
-GLM for >=1000.
-
-Loess smoothing requires the `scikit-misc` package.
-
-### Linear fit
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="displ", y="hwy"))
-    + geom_point(alpha=0.4)
-    + geom_smooth(method="lm")
-    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Linear Fit")
-)
-```
-
-### Loess smoother with custom span
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="displ", y="hwy"))
-    + geom_point(alpha=0.4)
-    + geom_smooth(method="loess", span=0.5, color="darkred")
-    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Loess Smoother (span=0.5)")
-)
-```
-
-### Grouped smoothers
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="displ", y="hwy", color="factor(drv)"))
-    + geom_point(alpha=0.4)
-    + geom_smooth(method="lm", se=False)
-    + labs(x="Engine Displacement (L)", y="Highway MPG", color="Drive", title="Linear Fit by Drive Type")
-)
-```
-
-### Full-range prediction
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="displ", y="hwy"))
-    + geom_point(alpha=0.4)
-    + geom_smooth(method="lm", fullrange=True)
-    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Full-Range Linear Fit")
-)
-```
-
-## stat_summary
-
-Summarizes y values at each x with a central tendency and range.
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `fun_data` | `"mean_cl_boot"` | Function returning y, ymin, ymax |
-| `fun_y` | `None` | Function for central y value |
-| `fun_ymin` | `None` | Function for lower bound |
-| `fun_ymax` | `None` | Function for upper bound |
-| `geom` | `"pointrange"` | Default geom |
-
-Built-in `fun_data` options: `"mean_cl_boot"` (bootstrap CI), `"mean_se"`
-(mean +/- SE), `"median_hilow"` (median with quantile range).
-
-### Mean with bootstrap confidence interval
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-
-(
-    ggplot(mpg, aes(x="class", y="hwy"))
-    + stat_summary(fun_data="mean_se")
-    + labs(x="Vehicle Class", y="Highway MPG", title="Mean +/- SE by Vehicle Class")
-)
-```
-
-### Custom summary functions
-
-Use `fun_y`, `fun_ymin`, and `fun_ymax` for custom aggregation.
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-import numpy as np
-
-(
-    ggplot(mpg, aes(x="class", y="hwy"))
-    + stat_summary(fun_y=np.median, fun_ymin=np.min, fun_ymax=np.max, color="red")
-    + labs(x="Vehicle Class", y="Highway MPG", title="Median with Min/Max Range")
-)
-```
-
-### stat_summary with bar geom
-
-```python
-from plotnine import *
-from plotnine.data import mpg
-import numpy as np
-
-(
-    ggplot(mpg, aes(x="class", y="hwy"))
-    + stat_summary(fun_y=np.mean, geom="bar", fill="steelblue", alpha=0.7)
-    + stat_summary(fun_data="mean_se", geom="errorbar", width=0.2)
-    + labs(x="Vehicle Class", y="Mean Highway MPG", title="Bar Chart with Error Bars")
-)
-```
-
-## stat_ecdf
-
-Computes and plots the empirical cumulative distribution function.
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `n` | `None` | Number of evaluation points (None = all data) |
-| `pad` | `True` | Pad ECDF with 0 at start and 1 at end |
-
-Default geom is `step`.
-
-### Basic ECDF
-
-```python
-from plotnine import *
-from plotnine.data import faithful
-
-(
-    ggplot(faithful, aes(x="eruptions"))
-    + stat_ecdf()
-    + labs(x="Eruption Duration (min)", y="Cumulative Proportion", title="ECDF of Old Faithful Eruptions")
-)
-```
-
-### Grouped ECDF
-
-```python
-from plotnine import *
-from plotnine.data import penguins
-
-(
-    ggplot(penguins.dropna(), aes(x="body_mass_g", color="species"))
-    + stat_ecdf()
-    + labs(x="Body Mass (g)", y="Cumulative Proportion", color="Species", title="Body Mass ECDF by Species")
-)
-```
+| Task                                    | Read in order                                                  |
+|-----------------------------------------|----------------------------------------------------------------|
+| Pick a stat                             | `api/stat_<name>.md`                                           |
+| Add a smoother / fit                    | `api/geom_smooth.md` → `api/stat_smooth.md` for fit parameters |
+| Summarize y at each x                   | `api/stat_summary.md`                                          |
+| Arrange overlapping bars / points       | Position Adjustments below                                     |
 
 ## Position Adjustments
 
 Position adjustments control how overlapping geoms are arranged.
 
-| Position | Description | Common with |
-|----------|-------------|-------------|
-| `position_dodge(width)` | Side-by-side within groups | `geom_bar`, `geom_col`, `geom_boxplot` |
-| `position_dodge2(width)` | Side-by-side, works with variable widths | `geom_boxplot` |
-| `position_stack()` | Stack on top of each other | `geom_bar`, `geom_area` |
-| `position_fill()` | Stack normalized to 100% | `geom_bar`, `geom_area` |
-| `position_jitter(width, height)` | Random offset | `geom_point` |
-| `position_jitterdodge()` | Jitter within dodged groups | `geom_point` with grouped bars |
+| Position                         | Description                                | Common with                                    |
+|----------------------------------|--------------------------------------------|------------------------------------------------|
+| `position_dodge(width)`          | Side-by-side within groups                 | `geom_bar`, `geom_col`, `geom_boxplot`         |
+| `position_dodge2(width)`         | Side-by-side, works with variable widths   | `geom_boxplot`                                 |
+| `position_stack()`               | Stack on top of each other                 | `geom_bar`, `geom_area`                        |
+| `position_fill()`                | Stack normalized to 100%                   | `geom_bar`, `geom_area`                        |
+| `position_jitter(width, height)` | Random offset                              | `geom_point`                                   |
+| `position_jitterdodge()`         | Jitter within dodged groups                | `geom_point` with grouped bars                 |
 
 ### Dodged bars with explicit width
 
@@ -264,6 +108,7 @@ from plotnine.data import mpg
 
 ## See Also
 
+- `api/stat_<name>.md` — parameter reference and single-stat examples
 - [geoms.md](geoms.md) — the geoms these stats produce
 - [aesthetics-and-scales.md](aesthetics-and-scales.md) — `after_stat()`
   mappings for stat-computed variables

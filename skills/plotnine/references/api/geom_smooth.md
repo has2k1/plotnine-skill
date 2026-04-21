@@ -36,6 +36,69 @@ A smoothed conditional mean
 | ymax | None |
 | ymin | None |
 
+## Examples
+
+When `method="auto"` (the default), plotnine uses loess for fewer
+than 1000 observations and GLM above that. Loess smoothing requires
+the `scikit-misc` package. See [stat_smooth.md](stat_smooth.md) for
+the full set of fit-related parameters.
+
+### Linear fit
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="displ", y="hwy"))
+    + geom_point(alpha=0.4)
+    + geom_smooth(method="lm")
+    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Linear Fit")
+)
+```
+
+### Loess smoother with custom span
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="displ", y="hwy"))
+    + geom_point(alpha=0.4)
+    + geom_smooth(method="loess", span=0.5, color="darkred")
+    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Loess Smoother (span=0.5)")
+)
+```
+
+### Grouped smoothers
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="displ", y="hwy", color="factor(drv)"))
+    + geom_point(alpha=0.4)
+    + geom_smooth(method="lm", se=False)
+    + labs(x="Engine Displacement (L)", y="Highway MPG", color="Drive", title="Linear Fit by Drive Type")
+)
+```
+
+### Full-range prediction
+
+```python
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="displ", y="hwy"))
+    + geom_point(alpha=0.4)
+    + geom_smooth(method="lm", fullrange=True)
+    + labs(x="Engine Displacement (L)", y="Highway MPG", title="Full-Range Linear Fit")
+)
+```
+
 ## See Also
 
 *(List related symbols here.)*
