@@ -10,7 +10,7 @@ Density estimate
 
 | Param | Type | Default | Description |
 |-------|------|---------|-------------|
-| `mapping` | aes | `None` | Aesthetic mappings created with aes. If specified and inherit_aes=True, it is combined with the default mapping for the plot. You must supply mapping if there is no plot mapping.  Options for computed aesthetics Calculated aesthetics are accessed using the after_stat function. e.g. after_stat('width'). |
+| `mapping` | aes | `None` | Aesthetic mappings created with aes. If specified and inherit_aes=True, it is combined with the default mapping for the plot. You must supply mapping if there is no plot mapping.  Options for computed aesthetics Calculated aesthetics are accessed using the after_stat function. e.g. after_stat('width'). |
 | `data` | DataFrame | `None` | The data to be displayed in this layer. If None, the data from from the ggplot() call is used. If specified, it overrides the data from the ggplot() call. |
 | `geom` | str \| geom | `"violin"` | The statistical transformation to use on the data for this layer. If it is a string, it must be the registered and known to Plotnine. |
 | `position` | str \| position | `"dodge"` | Position adjustment. If it is a string, it must be registered and known to Plotnine. |

@@ -235,8 +235,3 @@ from plotnine.data import penguins
   with coordinate systems
 - [themes-and-styling.md](themes-and-styling.md) — styling strip labels
   (`strip_text`, `strip_background`)
-
-## Resources
-
-- [plotnine facet_wrap reference](https://plotnine.org/reference/facet_wrap)
-- [plotnine facet_grid reference](https://plotnine.org/reference/facet_grid)

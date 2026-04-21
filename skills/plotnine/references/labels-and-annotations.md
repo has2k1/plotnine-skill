@@ -255,9 +255,3 @@ from plotnine.data import penguins
   `name=` on a scale (alternative to `labs(aes=...)`)
 - [themes-and-styling.md](themes-and-styling.md) — styling title,
   subtitle, caption, and annotation text
-
-## Resources
-
-- [plotnine labs reference](https://plotnine.org/reference/labs)
-- [plotnine annotate reference](https://plotnine.org/reference/annotate)
-- [plotnine geom_text reference](https://plotnine.org/reference/geom_text)

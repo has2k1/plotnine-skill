@@ -10,7 +10,7 @@ alias of scale_color_cmap_d
 
 | Param | Type | Default | Description |
 |-------|------|---------|-------------|
-| `cmap_name` | str | `'viridis'` | A standard Matplotlib colormap name. The default is viridis. For the list of names checkout the output of matplotlib.cm.cmap_d.keys() or see the documentation <http://matplotlib.org/users/colormaps.html>_. |
+| `cmap_name` | str | `'viridis'` | A standard Matplotlib colormap name. The default is viridis. For the list of names checkout the output of matplotlib.cm.cmap_d.keys() or see the documentation. |
 | `name` | str \| None | `None` | The name of the scale. It is used as the label of the axis or the title of the guide. Suitable defaults are chosen depending on the type of scale. |
 | `breaks` | DiscreteBreaksUser | `True` | List of major break points. Or a callable that takes a tuple of limits and returns a list of breaks. If True, automatically calculate the breaks. |
 | `limits` | DiscreteLimitsUser | `None` | Limits of the scale. These are the categories (unique values) of the variables. If is only a subset of the values, those that are left out will be treated as missing data and represented with a na_value. |

@@ -1,7 +1,7 @@
 # Maps
 
 Geographic plotting with `geom_map()`. Plotnine consumes
-[GeoPandas](https://geopandas.org/) GeoDataFrames directly; Shapely
+GeoPandas GeoDataFrames directly; Shapely
 geometries are read via the GeoDataFrame's `geometry` column.
 
 ## Data Model
@@ -11,7 +11,7 @@ Shapely shapes (points, lines, polygons). Data for plotting typically
 comes from:
 
 - **Shapefiles / GeoJSON** — `geopandas.read_file("...")`.
-- **[geodatasets](https://geodatasets.readthedocs.io/)** — curated
+- **geodatasets** — curated
   sample datasets: `geopandas.read_file(geodatasets.get_path("name"))`.
 - **Joined attribute tables** — merge a GeoDataFrame with a regular
   DataFrame on a shared key to attach values to regions.

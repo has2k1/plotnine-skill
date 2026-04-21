@@ -114,9 +114,3 @@ from plotnine.data import mpg
   mappings for stat-computed variables
 - [data-preparation.md](data-preparation.md) — when to precompute vs
   use a stat layer
-
-## Resources
-
-- [plotnine geom_smooth reference](https://plotnine.org/reference/geom_smooth)
-- [plotnine stat_summary reference](https://plotnine.org/reference/stat_summary)
-- [plotnine stat_ecdf reference](https://plotnine.org/reference/stat_ecdf)

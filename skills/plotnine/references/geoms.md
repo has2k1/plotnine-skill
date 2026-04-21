@@ -178,7 +178,3 @@ subset = economics.iloc[::60].copy()
 - [facets.md](facets.md) — splitting a geom across small multiples
 - [labels-and-annotations.md](labels-and-annotations.md) — adding
   text labels to geoms
-
-## Resources
-
-- [plotnine geom reference](https://plotnine.org/reference/#geoms)

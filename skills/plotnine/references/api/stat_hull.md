@@ -15,7 +15,7 @@
 | `geom` | str \| geom | `"path"` | The statistical transformation to use on the data for this layer. If it is a string, it must be the registered and known to Plotnine. |
 | `position` | str \| position | `"identity"` | Position adjustment. If it is a string, it must be registered and known to Plotnine. |
 | `na_rm` | bool | `False` | If False, removes missing values with a warning. If True silently removes missing values. |
-| `qhull_options` |  |  | Additional options to pass to Qhull. See Qhull <http://www.qhull.org/>__ documentation for details. |
+| `qhull_options` |  |  | Additional options to pass to Qhull. See Qhull documentation for details. |
 | `**kwargs` | Any |  | Aesthetics or parameters used by the geom. |
 
 ### Aesthetics

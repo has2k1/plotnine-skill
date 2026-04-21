@@ -94,9 +94,3 @@ alternative representations:
 - [facets.md](facets.md) — `scales="free"` to let each panel pick
   its own coordinate range
 - [maps.md](maps.md) — `coord_fixed()` is essential for geographic plots
-
-## Resources
-
-- [plotnine coord_cartesian reference](https://plotnine.org/reference/coord_cartesian)
-- [plotnine coord_flip reference](https://plotnine.org/reference/coord_flip)
-- [plotnine coord_fixed reference](https://plotnine.org/reference/coord_fixed)

@@ -318,7 +318,3 @@ comp.save("composition.png", dpi=300)
   applied with `&` sets composition dimensions
 - [saving-and-export.md](saving-and-export.md) — composition `.save()`
   differs from `ggplot.save()` (no `width`/`height`)
-
-## Resources
-
-- [plotnine composition guide](https://plotnine.org/reference/#composition)

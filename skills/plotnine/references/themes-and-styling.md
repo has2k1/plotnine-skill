@@ -294,7 +294,3 @@ from plotnine.data import mpg
   palettes that pair with theme choices
 - [aesthetic-specification.md](aesthetic-specification.md) — literal
   values for theme element properties (colors, fonts, sizes)
-
-## Resources
-
-- [plotnine themes reference](https://plotnine.org/reference/#themes)

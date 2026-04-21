@@ -257,9 +257,3 @@ closest achievable result using only plotnine. Never fall back to matplotlib.
 - [references/maps.md](references/maps.md) — geom_map, GeoPandas, choropleths, coord_fixed, theme_void
 - [references/aesthetic-specification.md](references/aesthetic-specification.md) — Literal color/linetype/shape/size/text value formats
 - `references/api/<symbol>.md` — Parameter reference for every public geom, stat, scale, and coord
-
-### External Resources
-
-- [plotnine documentation](https://plotnine.org)
-- [plotnine API reference](https://plotnine.org/reference/)
-- [plotnine gallery](https://plotnine.org/gallery/)

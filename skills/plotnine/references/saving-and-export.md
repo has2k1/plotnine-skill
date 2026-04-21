@@ -164,7 +164,3 @@ p.save("retina_plot.png", width=6, height=4, dpi=200)
   the in-theme alternative to `save(width, height)`
 - [composition.md](composition.md) — saving composed plots has
   different size semantics (no `width`/`height` on `.save()`)
-
-## Resources
-
-- [plotnine save reference](https://plotnine.org/reference/ggplot.save)

@@ -217,9 +217,3 @@ from plotnine.data import faithfuld
   palettes through `scale_color_*` / `scale_fill_*`
 - [themes-and-styling.md](themes-and-styling.md) — picking background
   colors that work with foreground palettes
-
-## Resources
-
-- [plotnine scales reference](https://plotnine.org/reference/#scales)
-- [ColorBrewer palettes](https://colorbrewer2.org/)
-- [Okabe-Ito palette](https://jfly.uni-koeln.de/color/)

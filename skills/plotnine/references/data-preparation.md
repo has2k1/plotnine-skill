@@ -264,8 +264,3 @@ import numpy as np
 - [geoms.md](geoms.md) — which geoms expect long vs wide input
 - [statistical-layers.md](statistical-layers.md) — prefer `stat_summary`
   to manual pandas aggregation when possible
-
-## Resources
-
-- [plotnine data reference](https://plotnine.org/reference/#data)
-- [pandas melt documentation](https://pandas.pydata.org/docs/reference/api/pandas.melt.html)
