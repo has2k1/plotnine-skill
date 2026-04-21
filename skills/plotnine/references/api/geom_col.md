@@ -53,7 +53,3 @@ avg_hwy = mpg.groupby("class", as_index=False).agg(mean_hwy=("hwy", "mean"))
     + labs(x="Vehicle Class", y="Mean Highway MPG", title="Average Highway MPG by Class")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

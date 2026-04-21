@@ -25,7 +25,3 @@ Sum unique values
 | y |  |
 | size | after_stat('n') |
 | weight | 1 |
-
-## See Also
-
-*(List related symbols here.)*

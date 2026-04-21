@@ -25,7 +25,3 @@ An empty plot
 | Aesthetic | Default value |
 |---|---|
 |  |  |
-
-## See Also
-
-*(List related symbols here.)*

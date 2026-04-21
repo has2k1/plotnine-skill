@@ -24,7 +24,3 @@
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

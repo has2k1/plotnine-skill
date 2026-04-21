@@ -33,7 +33,3 @@ Binning for a dot plot
 |---|---|
 | x |  |
 | y | after_stat('count') |
-
-## See Also
-
-*(List related symbols here.)*

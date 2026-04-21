@@ -24,7 +24,3 @@ Compute boxplot statistics
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

@@ -63,7 +63,3 @@ from plotnine.data import mpg
     + labs(x="Vehicle Class", y="Highway MPG", title="Highway MPG Distribution by Class")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

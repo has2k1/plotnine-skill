@@ -48,7 +48,3 @@ from plotnine.data import economics
     + labs(x="Date", y="Unemployed (thousands)", title="US Unemployment Over Time")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

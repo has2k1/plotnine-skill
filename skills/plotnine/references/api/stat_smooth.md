@@ -31,7 +31,3 @@ Calculate a smoothed conditional mean
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

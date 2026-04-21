@@ -37,7 +37,3 @@ from plotnine.data import diamonds
     + labs(x="Carat", y="Price (USD)", title="Log-Log Coordinate Transform")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

@@ -41,7 +41,3 @@ from plotnine.data import penguins
     + labs(x="Bill Length (mm)", y="Bill Depth (mm)", title="Penguins (Brewer Set2)", color="Species")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

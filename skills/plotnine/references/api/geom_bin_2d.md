@@ -34,7 +34,3 @@ Heatmap of 2d bin counts
 | group |  |
 | linetype | 'solid' |
 | size | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

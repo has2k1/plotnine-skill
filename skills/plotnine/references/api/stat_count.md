@@ -24,7 +24,3 @@ Counts the number of cases at each x position
 |---|---|
 | x |  |
 | y | after_stat('count') |
-
-## See Also
-
-*(List related symbols here.)*

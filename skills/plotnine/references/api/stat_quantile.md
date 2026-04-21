@@ -26,7 +26,3 @@ Compute quantile regression lines
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

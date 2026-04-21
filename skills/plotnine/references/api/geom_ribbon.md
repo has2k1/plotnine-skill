@@ -35,7 +35,3 @@ Ribbon plot
 | linetype | 'solid' |
 | size | 0.5 |
 | where | True |
-
-## See Also
-
-*(List related symbols here.)*

@@ -15,7 +15,3 @@ Compute 2D kernel density estimation
 | `levels` | int \| array_like | `5` | Contour levels. If an integer, it specifies the maximum number of levels, if array_like it is the levels themselves. |
 | `package` | Literal["statsmodels", "scipy", "sklearn"] | `"statsmodels"` | Package whose kernel density estimation to use. |
 | `kde_params` | dict |  | Keyword arguments to pass on to the kde class. |
-
-## See Also
-
-*(List related symbols here.)*

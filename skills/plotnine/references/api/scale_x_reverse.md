@@ -22,7 +22,3 @@ Continuous x position reverse transformed scale
 | `oob` | PCensor | `censor` | Function to deal with out of bounds (limits) data points. Default is to turn them into np.nan, which then get dropped. |
 | `minor_breaks` | MinorBreaksUser | `True` | If a list-like, it is the minor breaks points. If an integer, it is the number of minor breaks between any set of major breaks. If a function, it should have the signature func(limits) and return a list-like of consisting of the minor break points. If None, no minor breaks are calculated. The default is to automatically calculate them. |
 | `trans` | TransUser | `"reverse"` |  |
-
-## See Also
-
-*(List related symbols here.)*

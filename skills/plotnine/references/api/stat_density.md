@@ -32,7 +32,3 @@ Compute density estimate
 |---|---|
 | x |  |
 | y | after_stat('density') |
-
-## See Also
-
-*(List related symbols here.)*

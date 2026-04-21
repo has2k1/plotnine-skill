@@ -32,7 +32,3 @@ Summarise y values at x intervals
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

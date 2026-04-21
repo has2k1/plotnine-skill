@@ -47,7 +47,3 @@ from plotnine.data import diamonds
     + labs(x="Cut", y="Price (USD)", title="Diamond Price by Cut (Horizontal)")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

@@ -39,7 +39,3 @@ from plotnine.data import mpg
     + labs(x="Vehicle Class", y="Count", title="Cars by Class (Custom Order)")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

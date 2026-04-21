@@ -26,7 +26,3 @@ Calculate normal confidence interval ellipse
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

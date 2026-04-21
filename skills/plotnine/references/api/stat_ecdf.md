@@ -53,7 +53,3 @@ from plotnine.data import penguins
     + labs(x="Body Mass (g)", y="Cumulative Proportion", color="Species", title="Body Mass ECDF by Species")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

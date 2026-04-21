@@ -98,7 +98,3 @@ from plotnine.data import mpg
     + labs(x="Engine Displacement (L)", y="Highway MPG", title="Full-Range Linear Fit")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

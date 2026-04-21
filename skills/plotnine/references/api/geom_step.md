@@ -49,7 +49,3 @@ from plotnine.data import economics
     + labs(x="Date", y="Personal Savings Rate (%)", title="Savings Rate (Step)")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

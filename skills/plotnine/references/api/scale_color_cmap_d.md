@@ -21,7 +21,3 @@ A discrete color scales using Matplotlib colormaps
 | `aesthetics` | Sequence[ScaledAestheticsName] | `()` | Aesthetics affected by this scale. These are defined by each scale and the user should probably not change them. Have fun. |
 | `drop` | bool | `True` | Whether to drop unused categories from the scale |
 | `na_translate` | bool | `True` | If True translate missing values and show them. If False remove missing values. |
-
-## See Also
-
-*(List related symbols here.)*

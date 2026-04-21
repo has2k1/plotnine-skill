@@ -28,7 +28,3 @@ Calculation for quantile-quantile plot
 | sample |  |
 | x | after_stat('theoretical') |
 | y | after_stat('sample') |
-
-## See Also
-
-*(List related symbols here.)*

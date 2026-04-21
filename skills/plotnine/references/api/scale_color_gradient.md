@@ -40,7 +40,3 @@ from plotnine.data import economics
     + labs(x="Date", y="Unemployed (thousands)", title="Unemployment Colored by Duration", color="Median\nDuration (wk)")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

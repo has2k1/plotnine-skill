@@ -26,7 +26,3 @@ alias of scale_fill_hue
 | `na_translate` | bool | `True` | If True translate missing values and show them. If False remove missing values. |
 | `s` | None | `field(default=None, repr=False)` | Not being used and will be removed in a future version |
 | `color_space` | None | `field(default=None, repr=False)` | Not being used and will be removed in a future version |
-
-## See Also
-
-*(List related symbols here.)*

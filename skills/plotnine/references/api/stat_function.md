@@ -26,7 +26,3 @@ Superimpose a function onto a plot
 | Aesthetic | Default value |
 |---|---|
 | y | after_stat('fx') |
-
-## See Also
-
-*(List related symbols here.)*

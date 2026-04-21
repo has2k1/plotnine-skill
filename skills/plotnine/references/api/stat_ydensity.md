@@ -30,7 +30,3 @@ Density estimate
 | x |  |
 | y |  |
 | weight | None |
-
-## See Also
-
-*(List related symbols here.)*

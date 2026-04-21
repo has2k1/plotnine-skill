@@ -33,7 +33,3 @@ Line segment parameterised by location, direction and distance
 | group |  |
 | linetype | 'solid' |
 | size | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

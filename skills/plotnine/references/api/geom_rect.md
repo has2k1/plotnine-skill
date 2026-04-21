@@ -34,7 +34,3 @@ Rectangles
 | group |  |
 | linetype | 'solid' |
 | size | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

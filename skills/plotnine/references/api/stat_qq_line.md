@@ -28,7 +28,3 @@ Calculate line through quantile-quantile plot
 | Aesthetic | Default value |
 |---|---|
 | sample |  |
-
-## See Also
-
-*(List related symbols here.)*

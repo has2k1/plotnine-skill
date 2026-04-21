@@ -46,7 +46,3 @@ Textual annotations with a background
 | lineheight | 1.2 |
 | size | 11 |
 | va | 'center' |
-
-## See Also
-
-*(List related symbols here.)*

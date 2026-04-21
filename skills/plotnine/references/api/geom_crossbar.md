@@ -36,7 +36,3 @@ Vertical interval represented by a crossbar
 | group |  |
 | linetype | 'solid' |
 | size | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

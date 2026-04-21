@@ -29,7 +29,3 @@
 | y |  |
 | fill | after_stat('count') |
 | weight | None |
-
-## See Also
-
-*(List related symbols here.)*

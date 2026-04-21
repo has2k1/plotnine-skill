@@ -33,7 +33,3 @@ Rasterized Rectangles specified using center points
 | alpha | 1 |
 | fill | '#333333' |
 | group |  |
-
-## See Also
-
-*(List related symbols here.)*

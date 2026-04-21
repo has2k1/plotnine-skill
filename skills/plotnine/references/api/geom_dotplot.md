@@ -34,7 +34,3 @@ Dot plot
 | color | 'black' |
 | fill | 'black' |
 | group |  |
-
-## See Also
-
-*(List related symbols here.)*

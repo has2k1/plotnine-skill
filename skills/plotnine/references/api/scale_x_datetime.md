@@ -47,7 +47,3 @@ from plotnine.data import economics
 
 Common date format codes: `%Y` (4-digit year), `%y` (2-digit year),
 `%m` (month number), `%b` (abbreviated month), `%d` (day).
-
-## See Also
-
-*(List related symbols here.)*

@@ -64,7 +64,3 @@ from plotnine.data import mpg
     + labs(x="Vehicle Class", y="Count", title="Cylinder Distribution by Class", fill="Cylinders")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

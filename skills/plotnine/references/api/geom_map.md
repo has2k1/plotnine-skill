@@ -33,7 +33,3 @@ Draw map feature
 | shape | 'o' |
 | size | 0.5 |
 | stroke | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

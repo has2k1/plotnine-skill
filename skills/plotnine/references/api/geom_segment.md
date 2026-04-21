@@ -66,7 +66,3 @@ df = pd.DataFrame({
     + labs(x="X", y="Y", title="Directed Arrows")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

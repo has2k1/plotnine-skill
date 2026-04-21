@@ -64,7 +64,3 @@ from plotnine.data import diamonds
     + labs(x="Carat", y="Price (USD)", title="Diamond Price by Carat and Cut", color="Cut Quality")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

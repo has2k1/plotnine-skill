@@ -31,7 +31,3 @@ Count cases in each interval
 | x |  |
 | weight | None |
 | y | after_stat('count') |
-
-## See Also
-
-*(List related symbols here.)*

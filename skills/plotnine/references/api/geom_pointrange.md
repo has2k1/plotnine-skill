@@ -36,7 +36,3 @@ Vertical interval represented by a line with a point
 | linetype | 'solid' |
 | shape | 'o' |
 | size | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*

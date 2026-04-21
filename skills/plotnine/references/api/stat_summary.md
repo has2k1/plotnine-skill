@@ -81,7 +81,3 @@ import numpy as np
     + labs(x="Vehicle Class", y="Mean Highway MPG", title="Bar Chart with Error Bars")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

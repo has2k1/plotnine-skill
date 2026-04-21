@@ -33,7 +33,3 @@ Compute Sina plot values
 |---|---|
 | x |  |
 | y |  |
-
-## See Also
-
-*(List related symbols here.)*

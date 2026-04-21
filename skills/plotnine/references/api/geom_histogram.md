@@ -47,7 +47,3 @@ from plotnine.data import diamonds
     + labs(x="Carat", y="Count", title="Distribution of Diamond Carat Weight")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

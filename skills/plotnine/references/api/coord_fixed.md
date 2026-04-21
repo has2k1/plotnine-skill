@@ -35,7 +35,3 @@ from plotnine.data import mpg
     + labs(x="City MPG", y="Highway MPG", title="City vs Highway (Equal Scale)")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

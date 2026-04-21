@@ -49,7 +49,3 @@ from plotnine.data import faithfuld
     + labs(x="Eruption Duration (min)", y="Waiting Time (min)", title="Old Faithful Density Heatmap", fill="Density")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

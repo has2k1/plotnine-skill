@@ -52,7 +52,3 @@ from plotnine.data import mpg
     + labs(x="Engine Displacement (L)", y="Highway MPG", title="Scatter with Marginal Rugs")
 )
 ```
-
-## See Also
-
-*(List related symbols here.)*

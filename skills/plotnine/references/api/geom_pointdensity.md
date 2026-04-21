@@ -33,7 +33,3 @@ Scatterplot with density estimation at each point
 | shape | 'o' |
 | size | 1.5 |
 | stroke | 0.5 |
-
-## See Also
-
-*(List related symbols here.)*
