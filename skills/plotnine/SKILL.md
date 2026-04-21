@@ -84,6 +84,11 @@ Use: [references/maps.md](references/maps.md)
 Task: Specify literal aesthetic values (colors, linetypes, shapes, fonts)
 Use: [references/aesthetic-specification.md](references/aesthetic-specification.md)
 
+Task: Look up a specific symbol's parameters, types, or defaults
+Use: `references/api/<symbol>.md` (e.g. [references/api/geom_point.md](references/api/geom_point.md)).
+     British-spelling aliases (`scale_colour_*`) and 2d-suffix aliases
+     (`geom_bin2d`, `stat_bin2d`) redirect to the canonical spelling.
+
 ## Decision Trees
 
 Natural-language routing for when a user's question doesn't map cleanly
@@ -251,6 +256,7 @@ closest achievable result using only plotnine. Never fall back to matplotlib.
 - [references/composition.md](references/composition.md) — Plot composition with |, /, +, &, *, plot_layout, plot_annotation
 - [references/maps.md](references/maps.md) — geom_map, GeoPandas, choropleths, coord_fixed, theme_void
 - [references/aesthetic-specification.md](references/aesthetic-specification.md) — Literal color/linetype/shape/size/text value formats
+- `references/api/<symbol>.md` — Parameter reference for every public geom, stat, scale, and coord
 
 ### External Resources
 
