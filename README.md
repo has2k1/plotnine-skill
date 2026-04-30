@@ -5,22 +5,17 @@ An [AI Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) for ge
 ## Install for all common agents
 
 ```
+uvx skillmd add has2k1/plotnine-skill
+```
+
+OR
+
+```
 npx skills add has2k1/plotnine-skill
 ```
 
-## Install for specific agents
+With either option, you will be prompted to choose the specific agents you wish to configure.
 
-### Claude Code
-
-```
-npx skills add has2k1/plotnine-skill -a claude-code
-```
-
-### Codex
-
-```
-npx skills add has2k1/plotnine-skill -a codex
-```
 
 ## Using the skill
 
